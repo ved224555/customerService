@@ -7,15 +7,17 @@ import javax.persistence.Id;
 public class Model {
 	@Id
 private Long cid;
+private Long did;
 private String cname;
 private String cmail;
 
 public Model() {
 	super();
 }
-public Model(Long cid, String cname, String cmail) {
+public Model(Long cid, Long did, String cname, String cmail) {
 	super();
 	this.cid = cid;
+	this.did = did;
 	this.cname = cname;
 	this.cmail = cmail;
 }
@@ -36,6 +38,12 @@ public String getCmail() {
 }
 public void setCmail(String cmail) {
 	this.cmail = cmail;
+}
+public Long getDid() {
+	return did;
+}
+public void setDid(Long did) {
+	this.did = did;
 }
 
 
